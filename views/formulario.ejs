@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Tareas</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="container">
+       <div  class="jumbotron">
+        <h1>Lista de Tareas</h1>
+            <ul>
+            <% tareas.forEach(function(tarea, id){%>
+            <li><%= tarea %> <a class="badge" href="/borrar/<%=id%>">X</a></li>
+            <% });%>
+            </ul>
+            <form action="adicionar/" method="post">
+                <p>
+                    <label for="nuevaTarea">Nueva Tarea: </label>
+                    <input type="text" name="nuevaTarea" autofocus id="nuevaTarea"/>
+                    <input class="btn btn-lg btn-success" type="submit" />
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
